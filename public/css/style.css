@@ -191,3 +191,62 @@ section {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
+
+/* ===== Hero ===== */
+.hero {
+  margin-top: var(--nav-height);
+  padding: 6rem 1.5rem;
+  background: linear-gradient(135deg, #e8f0e9 0%, #d4e4d7 40%, #c8ddd0 100%);
+  text-align: center;
+}
+
+.hero__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero__lpc {
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+.hero__tagline {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.hero__intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+/* ===== Button ===== */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 4rem 1.5rem; }
+  .hero h1 { font-size: 2.2rem; }
+}
