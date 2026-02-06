@@ -413,6 +413,17 @@ section.contact {
   align-items: start;
 }
 
+.contact-photo {
+  margin-bottom: 2rem;
+}
+
+.contact-photo img {
+  width: 240px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
 .contact-item {
   margin-bottom: 2rem;
 }
