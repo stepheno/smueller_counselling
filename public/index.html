@@ -11,6 +11,41 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Content will be added in subsequent tasks -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__brand">
+        <span class="nav__name">Sarah Mueller</span>
+        <span class="nav__title">, LPC</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav__menu">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#fees" class="nav__link">Fees</a>
+        <a href="#resources" class="nav__link">Resources</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.querySelector('.nav__menu');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('nav__menu--open');
+    });
+    document.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('nav__menu--open');
+      });
+    });
+  </script>
 </body>
 </html>
