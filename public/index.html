@@ -42,7 +42,7 @@
   </section>
 
   <section id="about">
-    <div class="container section-intro">
+    <div class="container section-intro fade-in">
       <h2>About My Approach</h2>
       <p>I am trained in different trauma informed treatments, including <strong>EMDR Therapy</strong> (Eye Movement Desensitization and Reprocessing) and specialize in the treatment of trauma.</p>
       <p>Evidence-based methods are used to stabilize and build skills before trauma is addressed. Treatment is targeted to rebuild neurological pathways and remain within the client's window of emotional tolerance.</p>
@@ -55,7 +55,7 @@
       <div class="section-intro">
         <h2>Concerns Treated</h2>
       </div>
-      <div class="card-grid">
+      <div class="card-grid fade-in">
         <div class="card">Trauma &amp; PTSD</div>
         <div class="card">Anxiety</div>
         <div class="card">Depression</div>
@@ -74,7 +74,7 @@
       <div class="section-intro">
         <h2>Fees &amp; Insurance</h2>
       </div>
-      <div class="fees-grid">
+      <div class="fees-grid fade-in">
         <div class="fee-card">
           <h3>Intake Session</h3>
           <p class="fee-card__price">$200</p>
@@ -113,7 +113,7 @@
         <h2>Resources</h2>
       </div>
       <div class="resources-grid">
-        <div class="resource-block">
+        <div class="resource-block fade-in">
           <h3>Local Crisis Lines</h3>
           <ul>
             <li>Clackamas County Crisis Line: <a href="tel:5036558585">503-655-8585</a></li>
@@ -124,7 +124,7 @@
             <li>Washington County Crisis Line: <a href="tel:5032919111">503-291-9111</a></li>
           </ul>
         </div>
-        <div class="resource-block">
+        <div class="resource-block fade-in">
           <h3>National Organizations</h3>
           <ul>
             <li><a href="https://www.isst-d.org/" target="_blank" rel="noopener">ISSTD</a> &mdash; International Society for the Study of Trauma &amp; Dissociation</li>
@@ -134,13 +134,13 @@
             <li><a href="https://www.sidran.org" target="_blank" rel="noopener">Sidran Institute</a> &mdash; Traumatic Stress Education and Advocacy</li>
           </ul>
         </div>
-        <div class="resource-block">
+        <div class="resource-block fade-in">
           <h3>Local Support Groups</h3>
           <ul>
             <li><a href="https://www.portlandsupportgroups.com" target="_blank" rel="noopener">Portland Support Groups</a></li>
           </ul>
         </div>
-        <div class="resource-block">
+        <div class="resource-block fade-in">
           <h3>Helpful Apps</h3>
           <ul>
             <li>Breathe2Relax</li>
@@ -161,7 +161,7 @@
       <div class="section-intro">
         <h2>Contact</h2>
       </div>
-      <div class="contact-grid">
+      <div class="contact-grid fade-in">
         <div class="contact-info">
           <div class="contact-item">
             <h3>Phone</h3>
@@ -212,6 +212,16 @@
         menu.classList.remove('nav__menu--open');
       });
     });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
