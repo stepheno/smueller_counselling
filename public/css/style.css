@@ -437,3 +437,12 @@ section {
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.9rem;
+}
