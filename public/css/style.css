@@ -355,3 +355,48 @@ section {
   .fees-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto 3rem; }
   .fees-info { grid-template-columns: 1fr; }
 }
+
+/* ===== Resources ===== */
+.resources-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.resource-block {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.resource-block h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.resource-block ul {
+  list-style: none;
+}
+
+.resource-block li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.resource-block a {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-underline-offset: 2px;
+}
+
+.resource-block a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .resources-grid { grid-template-columns: 1fr; }
+}
