@@ -286,3 +286,72 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Fees ===== */
+.fees-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.fee-card {
+  background: var(--color-white);
+  padding: 2rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.fee-card__price {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-top: 0.5rem;
+}
+
+.fee-card__detail {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.fees-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.fees-info__block h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.fees-info__block ul {
+  list-style: none;
+}
+
+.fees-info__block li {
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.fees-info__block li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .fees-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto 3rem; }
+  .fees-info { grid-template-columns: 1fr; }
+}
